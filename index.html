@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        .message {
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+        }
+        .success {
+            background-color: green;
+        }
+        .error {
+            background-color: red;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Alunos</h1>
+
+    <form action="/add" method="POST">
+        <input type="text" name="name" placeholder="Nome do aluno" required>
+        <input type="text" name="age" placeholder="Idade do aluno" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Lista de Alunos Cadastrados</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Ação</th>
+        </tr>
+        
+        <tr>
+            <td>22</td>
+            <td>Nicoli Miguel</td>
+            <td>12</td>
+            <td><a href="/delete/22">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>23</td>
+            <td>Ricardo Du VLG</td>
+            <td>16</td>
+            <td><a href="/delete/23">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>24</td>
+            <td>Nina Pigatti Degli Esposti</td>
+            <td>16</td>
+            <td><a href="/delete/24">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>25</td>
+            <td>MK</td>
+            <td>18</td>
+            <td><a href="/delete/25">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>26</td>
+            <td>Renan Altoé Ventorim</td>
+            <td>17</td>
+            <td><a href="/delete/26">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>27</td>
+            <td>Marlon Vicentini Silva</td>
+            <td>17</td>
+            <td><a href="/delete/27">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>28</td>
+            <td>Cristiano</td>
+            <td>22</td>
+            <td><a href="/delete/28">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>30</td>
+            <td>Ricardo </td>
+            <td>12 meses</td>
+            <td><a href="/delete/30">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>32</td>
+            <td>Marina Júlia Dalvi Pigatti</td>
+            <td>17</td>
+            <td><a href="/delete/32">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>33</td>
+            <td>Guilherme chines Kobi</td>
+            <td>12 anos calendario chines</td>
+            <td><a href="/delete/33">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>35</td>
+            <td>Rafael miranda</td>
+            <td>43</td>
+            <td><a href="/delete/35">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>36</td>
+            <td>Billy</td>
+            <td>14</td>
+            <td><a href="/delete/36">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>37</td>
+            <td>MAJU</td>
+            <td>78</td>
+            <td><a href="/delete/37">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>38</td>
+            <td>Raphael ta jogando FF ao vivo agora</td>
+            <td>16</td>
+            <td><a href="/delete/38">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>39</td>
+            <td>Pyetra</td>
+            <td>Peres</td>
+            <td><a href="/delete/39">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>40</td>
+            <td>Mariana Pigatti Degli Esposti</td>
+            <td>Uhull</td>
+            <td><a href="/delete/40">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>41</td>
+            <td>PYETRA</td>
+            <td>RICARDO</td>
+            <td><a href="/delete/41">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>47</td>
+            <td>Pyetra com Ricardo</td>
+            <td>Forever</td>
+            <td><a href="/delete/47">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>55</td>
+            <td>Marina + Maria Júlia = </td>
+            <td>Marina Júlia para sempre (valentina, aceita!)</td>
+            <td><a href="/delete/55">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>60</td>
+            <td>maria julia só ama a valentina</td>
+            <td>supera marina</td>
+            <td><a href="/delete/60">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>61</td>
+            <td>Pyetra + Ricardo =</td>
+            <td>Piriri (nome do shipp)</td>
+            <td><a href="/delete/61">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>64</td>
+            <td>gk para tudo </td>
+            <td>25</td>
+            <td><a href="/delete/64">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>65</td>
+            <td>Ph do Zumbi</td>
+            <td>0,8  dias</td>
+            <td><a href="/delete/65">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>67</td>
+            <td>maju + vava</td>
+            <td>∞</td>
+            <td><a href="/delete/67">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>68</td>
+            <td>teste</td>
+            <td>danado</td>
+            <td><a href="/delete/68">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>69</td>
+            <td>Jotaro Kujo</td>
+            <td>17</td>
+            <td><a href="/delete/69">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>71</td>
+            <td>João  Barba Ruiva</td>
+            <td>33</td>
+            <td><a href="/delete/71">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>72</td>
+            <td>Prezados, preciso falar com Raphael Ribeiro Basto urgente, Prezados</td>
+            <td>12</td>
+            <td><a href="/delete/72">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>75</td>
+            <td>Cristiano Colombo</td>
+            <td>12345678910</td>
+            <td><a href="/delete/75">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>76</td>
+            <td>PROGRAMA </td>
+            <td>TOP!!!!!!</td>
+            <td><a href="/delete/76">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>80</td>
+            <td>No alto daquele cume...</td>
+            <td>alguns</td>
+            <td><a href="/delete/80">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>82</td>
+            <td>TIMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</td>
+            <td>EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</td>
+            <td><a href="/delete/82">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>83</td>
+            <td>quem é o lider? </td>
+            <td>TIMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</td>
+            <td><a href="/delete/83">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>84</td>
+            <td>Dingo Bell, Dingo Bell, sou seu papai noel</td>
+            <td>Teteu</td>
+            <td><a href="/delete/84">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>85</td>
+            <td>garrafinha</td>
+            <td>uma quantidade não deteterminada</td>
+            <td><a href="/delete/85">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>86</td>
+            <td>MEU VOTO E NA MAJU</td>
+            <td>AGORA</td>
+            <td><a href="/delete/86">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>87</td>
+            <td>maju + vava</td>
+            <td>∞</td>
+            <td><a href="/delete/87">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>88</td>
+            <td>Fpx_do_penhão_rlk028 vulgo J.P. Schayder</td>
+            <td>57</td>
+            <td><a href="/delete/88">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>89</td>
+            <td>miguel +13</td>
+            <td>12</td>
+            <td><a href="/delete/89">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>90</td>
+            <td>eu voto na </td>
+            <td>pyetra</td>
+            <td><a href="/delete/90">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>91</td>
+            <td>quem esta lendo</td>
+            <td>e um dia inteiro com o diego</td>
+            <td><a href="/delete/91">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>93</td>
+            <td>Shaulin Matador de Porco</td>
+            <td>Flavinho do Pneu</td>
+            <td><a href="/delete/93">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>94</td>
+            <td>para um gorveno cruel</td>
+            <td>vote miguel</td>
+            <td><a href="/delete/94">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>95</td>
+            <td>Raphael P Diddy da Silva</td>
+            <td>preso</td>
+            <td><a href="/delete/95">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>98</td>
+            <td>RAPHAEL BARCELLOS </td>
+            <td>11</td>
+            <td><a href="/delete/98">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>100</td>
+            <td>Miguel P Diddy Nicoli</td>
+            <td>-</td>
+            <td><a href="/delete/100">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>101</td>
+            <td>THIS IS CABEÇA GRANDE</td>
+            <td>12</td>
+            <td><a href="/delete/101">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>112</td>
+            <td>Raphael Conholato Diddy Nicoli</td>
+            <td>24</td>
+            <td><a href="/delete/112">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>114</td>
+            <td>Sam Carmícu</td>
+            <td>Três Pontinhos</td>
+            <td><a href="/delete/114">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>115</td>
+            <td>Ph joga bola e dança</td>
+            <td>1</td>
+            <td><a href="/delete/115">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>117</td>
+            <td>messias + marlon</td>
+            <td>amor eterno</td>
+            <td><a href="/delete/117">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>118</td>
+            <td>messias + marlon = </td>
+            <td>marisa</td>
+            <td><a href="/delete/118">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>119</td>
+            <td>marisa brisa</td>
+            <td>maioral</td>
+            <td><a href="/delete/119">Excluir</a></td>
+        </tr>
+        
+        <tr>
+            <td>120</td>
+            <td>fxp_rlk_passeAcria_do_castelão_rlx028fxp</td>
+            <td>-Zoinho 2024</td>
+            <td><a href="/delete/120">Excluir</a></td>
+        </tr>
+        
+    </table>
+</body>
+</html>

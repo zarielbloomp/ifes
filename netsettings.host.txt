@@ -1,0 +1,10 @@
+ipv4
+address 192.168.5.100
+netmask 255.255.255.0
+gateway 192.168.5.254
+ipv6
+address 2000:abcd:ef01:2345::2
+prefix length 64
+gateway fe80::1
+mac
+address a0:b1:c2:d3:e4:f5
